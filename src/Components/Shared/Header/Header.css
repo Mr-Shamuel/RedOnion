@@ -1,0 +1,10 @@
+.navs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin: 0px 50px;
+}
+.navItems a {
+  margin: 0px 20px;
+}

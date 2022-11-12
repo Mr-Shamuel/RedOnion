@@ -1,0 +1,30 @@
+.footer {
+  height: 400px;
+  display: grid;
+}
+.footerTop {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  justify-content: center;
+  align-content: center;
+}
+.footerService {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+.footer a {
+  color: whitesmoke;
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s ease;
+  padding: 2px;
+}
+
+.footernav a {
+  padding: 0px 20px;
+}
+
+.footer a:hover {
+  color: rgb(200, 156, 45);
+}

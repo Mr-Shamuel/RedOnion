@@ -1,0 +1,10 @@
+.servicesContainer .title {
+  padding-left: 70px;
+}
+.row {
+  margin: 0px auto;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}

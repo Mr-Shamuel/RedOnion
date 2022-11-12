@@ -1,0 +1,30 @@
+.bannerContainer {
+  background: url("../../../images/bannerbackground.png");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  height: 550px;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search {
+  border-radius: 25px;
+  width: 500px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+.search input {
+  border: 1px solid red;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  width: 100%;
+}
+.bannerTitle {
+  font-size: 55px;
+  margin-top: -95px;
+}

@@ -1,0 +1,9 @@
+.card:hover {
+  box-shadow: 10px 11px 24px -11px rgba(0, 0, 0, 0.95);
+  -webkit-box-shadow: 10px 11px 24px -11px rgba(0, 0, 0, 0.95);
+  -moz-box-shadow: 10px 11px 24px -11px rgba(0, 0, 0, 0.95);
+}
+
+.card {
+  transition: 0.4s ease;
+}
