@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import logo1 from '../../../images/icons/Group 204.png';
 import logo2 from '../../../images/icons/Group 1133.png';
@@ -8,6 +8,7 @@ import service2 from '../../../images/service2.png'
 import service3 from '../../../images/service3.png'
 import Service from '../Service/Service';
 import './Services.css'
+
 
 const serviceData = [
     {
@@ -35,6 +36,7 @@ const serviceData = [
 ]
 
 const Services = () => {
+
     return (
         <div className='  servicesContainer py-5 my-4 '>
             <h1 className='text-center'> Services</h1>
