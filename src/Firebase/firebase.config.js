@@ -2,12 +2,12 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 const firebaseConfig = {
-    apiKey: "AIzaSyBn4e-NWGhDavZhAmAifPZEOnidj_jfRxI",
-    authDomain: "fire2-402d5.firebaseapp.com",
-    projectId: "fire2-402d5",
-    storageBucket: "fire2-402d5.appspot.com",
-    messagingSenderId: "628585776396",
-    appId: "1:628585776396:web:75ec8b55583241430df529"
+    apiKey: "AIzaSyBAmt5zIlvAUokvCAvcKTxy-qb4RvMv040",
+    authDomain: "redonion-97da8.firebaseapp.com",
+    projectId: "redonion-97da8",
+    storageBucket: "redonion-97da8.appspot.com",
+    messagingSenderId: "428081856711",
+    appId: "1:428081856711:web:5cac5449452f7f866b7ee2"
 };
 
 // Initialize Firebase

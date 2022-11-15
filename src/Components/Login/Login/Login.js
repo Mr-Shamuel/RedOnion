@@ -6,47 +6,22 @@ import { Link } from 'react-router-dom';
 import fb from '../../../icon/fb.png'
 import google from '../../../icon/google.png'
 import Header from '../../Shared/Header/Header';
+import useFirebase from '../../../Hooks/useFirebase';
 // import './Login.css'
 
 const Login = () => {
 
+    const { HandleGoogleSignIn } = useFirebase();
 
-    // Creating signing  accunt
-
-    const handleBlurEmail = (e) => {
-
-    }
-    const handleBlurPassword = (e) => {
-
-    }
-
-
-    //hendlesubmit
-
-    const handleSubmit = () => {
-
-    }
-
-    // google signin 
-    const HandleGoogleSignIn = () => {
-
-
-
-    }
-    //reset password 
-    const handleForgetPassword = () => {
-
-
-    }
 
     return (
         <div>
-            <Header></Header>
+
             <div className='register mt-5  '>
                 <div>
 
                     <Box className='registerCon'
-                        onSubmit={handleSubmit}
+                        // onSubmit={handleSubmit}
                         component="form"
                         sx={{
                             '& > :not(style)': { mx: 3, my: 2, width: '50ch' },
@@ -57,12 +32,12 @@ const Login = () => {
                         <h4>Login</h4>
 
 
-                        <TextField onBlur={handleBlurEmail} id="standard-basic" label="Username or Email" variant="standard" />
+                        <TextField id="standard-basic" label="Username or Email" variant="standard" />
                         <br />
                         <br />
 
-                        <TextField onBlur={handleBlurPassword} id="standard-basic" label="Password" variant="standard" /> <br />
-                        <Link onClick={handleForgetPassword} className='text-warning'> Forget Password</Link>
+                        <TextField id="standard-basic" label="Password" variant="standard" /> <br />
+                        <Link className='text-warning'> Forget Password</Link>
 
 
                         <button className='registerBtn btn btn-primary mt-4 my-2' type='submit'>Login</button>
@@ -80,7 +55,7 @@ const Login = () => {
 
                     <div className="socialButton">
 
-                        <div className="facebookBtn btn btn-outline-info text-dark  border"><img src={fb} alt="" /> <p className='pt-1'>Continue with Facebook</p></div>
+                        <div onClick={HandleGoogleSignIn} className="facebookBtn btn btn-outline-info text-dark  border"><img src={fb} alt="" /> <p className='pt-1'>Continue with Facebook</p></div>
                         <br />
                         <div onClick={HandleGoogleSignIn} className="googleBtn btn btn-outline-info text-dark border"><img src={google} alt="" /><p className='pt-1'>Continue with Google</p> </div>
 
