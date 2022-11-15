@@ -1,23 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-
 import { Link } from 'react-router-dom';
 import fb from '../../../icon/fb.png'
 import google from '../../../icon/google.png'
 import './Register.css'
-import Header from '../../Shared/Header/Header';
+import useFirebase from '../../../Hooks/useFirebase';
 
 const Register = () => {
+    const { HandleGoogleSignIn } = useFirebase();
+
 
     return (
         <div>
-            <Header></Header> <div className='register mt-4'>
+            <div className='register mt-4'>
                 <div>
-
-
-
-
                     <Box className='registerCon'
 
                         component="form"
@@ -50,9 +47,9 @@ const Register = () => {
                     </div>
 
                     <div className="socialButton">
-                        <div className="facebookBtn btn btn-outline-info text-dark  border"><img src={fb} alt="" /> <p className='pt-1'>Continue with Facebook</p></div>
+                        <div onClick={HandleGoogleSignIn} className="facebookBtn btn btn-outline-info text-dark  border"><img src={fb} alt="" /> <p className='pt-1'>Continue with Facebook</p></div>
                         <br />
-                        <div className="googleBtn btn btn-outline-info text-dark border"><img src={google} alt="" /><p className='pt-1'>Continue with Google</p> </div>
+                        <div onClick={HandleGoogleSignIn} className="googleBtn btn btn-outline-info text-dark border"><img src={google} alt="" /><p className='pt-1'>Continue with Google</p> </div>
 
                     </div>
                 </div>

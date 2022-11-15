@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const FoodDetails = ({ food }) => {
     const { id, name, image, price } = food;
-    const navigate = useNavigate()
+
     const [count, setCount] = useState(1);
     const handleDecrement = () => {
         if (count > 1) {

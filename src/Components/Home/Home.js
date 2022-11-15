@@ -21,7 +21,7 @@ const Home = () => {
 
     return (
         <div>
-            <Header cart={cart}></Header>
+            {/* <Header cart={cart}></Header> */}
             <Banner></Banner>
             <Categories handleAddToCart={handleAddToCart}></Categories>
             <Services></Services>
