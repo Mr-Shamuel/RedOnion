@@ -6,20 +6,18 @@ import Register from "./Components/Login/Register/Register";
 import Cart from "./Components/Pages/Cart/Cart";
 import Food from "./Components/Pages/Food/Food";
 import PrivateRoute from "./Components/Pages/PrivateRoute/PrivateRoute";
-import Footer from "./Components/Shared/Footer/Footer";
+
 import Header from "./Components/Shared/Header/Header";
 import NotMatch from "./Components/Shared/NotMatch/NotMatch";
+
 export const FoodContext = createContext();
-
 function App() {
-
-
 
   return (
     <div className="App">
 
 
-      <Header></Header>
+      <Header ></Header>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />

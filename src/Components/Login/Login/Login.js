@@ -87,7 +87,7 @@ const Login = () => {
                         <br />
                         <br />
 
-                        <TextField onBlur={handlePassword} id="standard-basic" label="Password" variant="standard" /> <br />
+                        <TextField onBlur={handlePassword} id="standard-basic" label="Password" type='password' variant="standard" /> <br />
                         <Link onClick={() => { sendPasswordResetEmail(email); toast("Reset mail send") }} className='text-warning'> Forget Password</Link>
 
                         {

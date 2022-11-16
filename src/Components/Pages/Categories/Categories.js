@@ -5,7 +5,7 @@ import CategoryNav from '../CategoryNav/CategoryNav';
 import Food from '../Food/Food';
 import Product from '../Product/Product';
 
-const Categories = ({ handleAddToCart }) => {
+const Categories = () => {
     const navigate = useNavigate();
     const [data, setData] = useState(MealData);
 
@@ -37,7 +37,7 @@ const Categories = ({ handleAddToCart }) => {
 
                 <div className="row">
                     {
-                        data.slice(0, 10).map(pd => <Product pd={pd} key={pd.id} handleProduct={handleProduct} handleAddToCart={handleAddToCart}></Product>)
+                        data.slice(0, 10).map(pd => <Product pd={pd} key={pd.id} handleProduct={handleProduct}  ></Product>)
                     }
                 </div>
             </div>

@@ -5,10 +5,16 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useProduct from '../../../Hooks/useProduct';
+import { useState } from 'react'
+
+
+const Product = ({ pd, handleProduct }) => {
+    const { handleAddToCart } = useProduct();
 
 
 
-const Product = ({ pd, handleProduct, handleAddToCart }) => {
+
     return (
         <div className='ProductCon  d-flex align-items-center justify-content-center col-sm-12  col-md-6 col-lg-4 col-xl-3'>
 

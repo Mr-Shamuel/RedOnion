@@ -26,7 +26,7 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-    // const handleName = (e) => { setName(e.target.value) }
+    const handleName = (e) => { setName(e.target.value) }
     const handleEmail = (e) => { setEmail(e.target.value) }
     const handlePassword = (e) => { setPassword(e.target.value) }
 
@@ -34,12 +34,19 @@ const Register = () => {
     const [updateProfile] = useUpdateProfile(auth);
 
     const handleSubmit = async (e) => {
-        const name = e.target.name.value
+
         await createUserWithEmailAndPassword(email, password);
         console.log(name)
         await updateProfile({ displayName: name });
         e.preventDefault();
     }
+    // const handleSubmit = async (e) => {
+    //     const name = e.target.name.value
+    //     await createUserWithEmailAndPassword(email, password);
+    //     console.log(name)
+    //     await updateProfile({ displayName: name });
+    //     e.preventDefault();
+    // }
 
     // google signing 
     const [GoogleSignIn] = useSignInWithGoogle(auth);
@@ -82,15 +89,15 @@ const Register = () => {
                         <h4>Create an account</h4>
 
 
-                        <TextField name='name' id="standard-basic" label="Name" variant="standard" />
-                        {/* <TextField onBlur={handleName} id="standard-basic" label="Name" variant="standard" /> */}
+                        {/* <TextField name='name' id="standard-basic" label="Name" variant="standard" /> */}
+                        <TextField onBlur={handleName} id="standard-basic" label="Name" variant="standard" />
                         <br />
                         <br />
                         <TextField onBlur={handleEmail} id="standard-basic" label="Username or Email" variant="standard" />
                         <br />
                         <br />
 
-                        <TextField onBlur={handlePassword} id="standard-basic" label="Password" variant="standard" /> <br />
+                        <TextField onBlur={handlePassword} id="standard-basic" label="Password" variant="standard" type='password' /> <br />
 
 
                         {

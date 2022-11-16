@@ -6,10 +6,11 @@ import './Header.css'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase/firebase.config';
 import { signOut } from 'firebase/auth';
-const Header = ({ cart }) => {
+import useProduct from '../../../Hooks/useProduct';
+const Header = () => {
     const [user] = useAuthState(auth);
 
-    console.log(user)
+
     return (
         <div className='header'>
 
@@ -19,7 +20,7 @@ const Header = ({ cart }) => {
                 </div>
                 <div className="navItems">
                     <Link onClick={() => window.location.reload()} className='btn btn-outline-success   border border-0 rounded-pill '> {user?.email && (user?.displayName || 'user')}</Link>
-                    <Link to='/cart' className='btn btn-outline-success   border border-0 rounded-circle '> <AddShoppingCartIcon className='cartBtn  '> </AddShoppingCartIcon> {cart?.length}</Link>
+                    <Link to='/cart' className='btn btn-outline-success   border border-0 rounded-circle '> <AddShoppingCartIcon className='cartBtn  '> </AddShoppingCartIcon>  </Link>
                     {
                         user?.email ? <Link onClick={() => signOut(auth)} className='btn btn-danger rounded-pill px-4 fw-bold'>SignOut</Link>
                             : <span>

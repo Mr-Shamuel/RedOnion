@@ -10,20 +10,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Home = () => {
-    const [cart, setCart] = useState([])
-    const handleAddToCart = (pd) => {
-        const newCart = [...cart, pd];
-        setCart(newCart);
-        toast("Product added");
-
-    }
-
 
     return (
         <div>
-            {/* <Header cart={cart}></Header> */}
+
             <Banner></Banner>
-            <Categories handleAddToCart={handleAddToCart}></Categories>
+            <Categories ></Categories>
             <Services></Services>
             <Footer></Footer>
 
