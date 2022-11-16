@@ -5,6 +5,7 @@ import Login from "./Components/Login/Login/Login";
 import Register from "./Components/Login/Register/Register";
 import Cart from "./Components/Pages/Cart/Cart";
 import Food from "./Components/Pages/Food/Food";
+import PrivateRoute from "./Components/Pages/PrivateRoute/PrivateRoute";
 import Footer from "./Components/Shared/Footer/Footer";
 import Header from "./Components/Shared/Header/Header";
 import NotMatch from "./Components/Shared/NotMatch/NotMatch";
@@ -23,7 +24,12 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/food/:foodId' element={<Food />} />
-        <Route path='/cart' element={<Cart />} />
+        <Route path='/cart' element={
+          <PrivateRoute>
+            <Cart />
+          </PrivateRoute>
+        } />
+
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='*' element={<NotMatch />} />
